@@ -12,7 +12,7 @@
 */
 
 // RUTAS GLOBAL
-Route::get('/', 'HomeController@')->name('home_path');
+Route::get('/', 'HomeController@index')->name('home_path');
 
 // RUTAS DE TAREAS
 Route::get('/task', 'TaskController@index')->name('task_index_path');
