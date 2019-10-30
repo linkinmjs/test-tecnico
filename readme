@@ -1,0 +1,6 @@
+Deploy:
+routes - función añadida sobre url "/"
+migration - caracter ";" faltante en create_categories_table
+
+Correcciones (hotfix):
+TaskController - caracter ">" faltante en el create del request
