@@ -43,11 +43,15 @@ class TaskController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+        //dd($request->title);
+
+
         $validateData = $request->validate([
             'title' => 'required'
         ]);
-        Task::create($request-all());
+                        
+        Task::create($request->all());
         Session::flash('alert-success', 'Registro Agregado con éxito');
         return redirect()->route('task_index_path');
     }
