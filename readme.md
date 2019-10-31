@@ -30,6 +30,7 @@ A continuación, les brindo el paso a paso para levantar localmente el proyecto 
 - Generar key - ```$php artisan key:generate```
 - Crear tablas mediante comando migrate - ```$php artisan migrate```
 - Crear registros de prueba - ```$php artisan db:seed```
+- Voila! el entorno esta listo para iniciar con el siguiente comando - ```$php artisan serve```
 
 #### TO-DO
 - [x] Clonar repo sobre el que se trabajará
