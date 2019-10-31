@@ -56,6 +56,7 @@
                 <th style="text-align: center">Título</th>
                 <th style="text-align: center">Descripción</th>
                 <th style="text-align: center">Categoría</th>
+                <th style="text-align: center">Individuo</th>
                 <th style="text-align: center">Acciones</th>
               </tr>
             </thead>
@@ -78,6 +79,7 @@
                                   <span class="label label-default" style="background-color: {{ $task->category->color }}">{{ $task->category->name }}</span>
                                 @endif
                             </td>
+                            <td>{{ $guy[0]->name }}</td>
                           <td align="center">
                             <a class="btn btn-info btn-xs" data-toggle="modal" data-target="#taskShow-{{$task->id}}" href="#" href="#" title="Ver Detalle">
                                 <span class="fas fa-eye" aria-hidden="true"></span>
