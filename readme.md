@@ -32,11 +32,11 @@ A continuación, les brindo el paso a paso para levantar localmente el proyecto 
 - Crear registros de prueba - ```$php artisan db:seed```
 - Voila! el entorno esta listo para iniciar con el siguiente comando - ```$php artisan serve```
 
-#### TO-DO
-- [x] Clonar repo sobre el que se trabajará
-- [x] Instalar y configurar el proyecto
-- [x] Solventar inconvenientes para compilar de manera correcta
-- [x] Resolver problema de creación de Tareas
-- [x] Asociar Tarea a Persona (individuo)
-- [x] Documentar
-- [ ] Crear nueva feature
+#### PDF TO-DO
+- Clonar repo sobre el que se trabajará ✓
+- Instalar y configurar el proyecto ✓
+- Solventar inconvenientes para compilar de manera correcta ✓
+- Resolver problema de creación de Tareas ✓
+- Asociar Tarea a Individuo ✓
+- Documentar 
+- Crear nueva Feature
