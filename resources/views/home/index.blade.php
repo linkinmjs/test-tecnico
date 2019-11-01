@@ -7,10 +7,29 @@
 @section('content')
 <div class="container-fluid">
     <div class="blog-header">
-        <h1 class="blog-title">ABM de tareas y categorías.</h1>
+        <div class="row">
+            <div class="col-sm-11">
+                <h1 class="blog-title">ABM de tareas y categorías.</h1>
+            </div>
+            <div class="col-sm-1">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Ir a ...
+                <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Introducción</a></li>
+                <li><a href="#agregados">Agregados</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">TO-DO</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
         <br>
         <p class="lead blog-description">Desarrollado bajo el framework Laravel V5.8 y Base de datos MySQL.</p>
     </div>
+
     <div class="row">
         <div class="col-sm-8 blog-main">
             <div class="blog-post">
@@ -125,6 +144,34 @@
             </div>
         </div>
         <!-- /.blog-sidebar -->
+        <div class="col-sm-8 blog-main">
+            <div class="blog-post">
+             
+                <h2 id="agregados" class="blog-post-title">Agregados</h2>
+                <p class="blog-post-meta">31 Octubre de 2019 Por <a href="https://ar.linkedin.com/in/mauricio-joaquin-stampella-510680113">Stampella Mauricio</a></p>
+                <h4>Enlace de Contacto</h4>
+                <ol class="list-unstyled">
+                    <li><a href="https://github.com/linkinmjs">Github</a></li>
+                    <li><a href="mailto:linkinmjs@gmail.com" "email me">Gmail</a></li>
+                    <li><a href="https://ar.linkedin.com/in/mauricio-joaquin-stampella-510680113">linkedin</a></li>
+                </ol>
+
+                <p>Commodo ex qui elit labore sunt.</p>
+                <hr>
+                <p>Do mollit esse commodo laboris.</p>
+                <br>
+                <blockquote>
+                    <p>Consequat eu voluptate eiusmod sint ad ad ex mollit minim est.</p>
+                </blockquote>
+                <br>
+                <p>Elit aute eiusmod ullamco et eu officia eu consequat velit.</p>
+                <br>
+                <h3>Ea in consequat est reprehenderit eu officia ad fugiat quis aliqua proident.</h3>
+                
+                <p>Incididunt laborum duis excepteur tempor labore id veniam aliquip quis sint consectetur. Est amet cupidatat aute veniam. Laborum officia consequat non non. Ad dolore voluptate est et anim nisi cupidatat ex magna mollit est. Dolore culpa et Lorem elit laboris. Consequat aliquip aliqua sunt occaecat irure. Qui exercitation do labore duis fugiat velit excepteur nulla id fugiat anim consectetur.</p>
+                
+            </div>
+        </div>
     </div>
 </div>
 @endsection
