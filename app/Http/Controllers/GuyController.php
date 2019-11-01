@@ -5,6 +5,7 @@ use TaskApp\Entities\Guy;
 use TaskApp\Entities\Task;
 use TaskApp\Entities\Category;
 use Illuminate\Http\Request;
+use Session;
 
 class GuyController extends Controller
 {
@@ -16,8 +17,9 @@ class GuyController extends Controller
     public function index()
     {
         $guys = Guy::orderBy('id', 'DESC')->get();
+        $tasks = Task::all();
         //dd($guys);
-        return view('guy.index')->with(['guys'=> $guys]);
+        return view('guy.index')->with(['guys'=> $guys, 'tasks' => $tasks]);
     }
 
     /**
@@ -38,7 +40,18 @@ class GuyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tasks = Task::all();
+        //dd($request);
+
+        // DB::table('guys')->insert([
+        //     'name'=> $request->input('name'),
+        //     'position'=> $request->input('position')
+        // ])
+
+        Guy::create($request->all());
+        Session::flash('alert-success', 'Registro agregado con éxito');
+        return redirect()->route('guy_index_path');
+
     }
 
     /**
@@ -81,17 +94,15 @@ class GuyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($guy)
     {
-        //
+        Guy::destroy($guy);
+        Session::flash('alert-success', 'Se ha borrado el registro con éxito');
+        return redirect()->route('guy_index_path');
     }
 
     public function search(Request $request)
     {
-        dd(Request);
-        $search     = $request->input("search");
-        $tasks      = Task::where('title', 'like', '%'.$search.'%')->orderBy('id', 'DESC')->get();
-        $categories = Category::where('is_active', '=', '1')->get();
-        return view('task.index')->with( ['tasks' => $tasks, 'categories' => $categories] );        
+
     }
 }

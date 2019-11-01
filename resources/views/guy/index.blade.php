@@ -66,7 +66,7 @@
                         <td align="center">{{ $guy->name }}</td>
                         <td align="center">
                                 @if(!empty($guy->task_id))
-                                  <span class="label label-default">{{ $guy->task_id }}</span>
+                                  <span class="label label-default">{{ $guy->task->title }}</span>
                                 @else
                                  <span class="label label-default">Ninguna tarea asignada</span>
                                 @endif
@@ -79,17 +79,17 @@
                             <a class="btn btn-primary btn-xs" href="#" title="Editar">
                                 <span class="fas fa-pen" aria-hidden="true"></span>
                             </a>
-                            <a class="btn btn-danger btn-xs" role="button" data-toggle="collapse" href="#" aria-expanded="false" aria-controls="" title="Eliminar">
+                            <a class="btn btn-danger btn-xs" role="button" data-toggle="collapse" href="#guyDelete-{{ $guy->id }}" aria-expanded="false" aria-controls="guyDelete-{{ $guy->id }}" title="Eliminar">
                                 <span class="fas fa-trash-alt" aria-hidden="true"></span>
                             </a>
-                            <div class="collapse" id="taskDetele-{{ $guy->id }}" style="position: absolute;">
+                            <div class="collapse" id="guyDelete-{{ $guy->id }}" style="position: absolute;">
                               <div class="well" style="margin-bottom: 0px; margin: 0px; padding: 7px; width: 190px;"> 
                                     <small>¿Desea eliminar este registro?</small>
                                         <br>
-                                    <a class="btn btn-success btn-xs" href="#" title="Si">
+                                    <a class="btn btn-success btn-xs" href="{{ route('guy_destroy_path', $guy->id) }}" title="Si">
                                         Si
                                     </a>
-                                    <a class="btn btn-danger btn-xs" title="No" role="button" data-toggle="collapse" href="" aria-expanded="false" aria-controls="">
+                                    <a class="btn btn-danger btn-xs" title="No" role="button" data-toggle="collapse" href="#guyDelete-{{ $guy->id }}" aria-expanded="false" aria-controls="">
                                         No
                                     </a>
                               </div>
@@ -106,4 +106,6 @@
         </table>
         <div class="panel-footer"></div>
     </div>
+@include('guy.create')
+
 @endsection
