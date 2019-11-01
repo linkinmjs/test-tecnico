@@ -18,6 +18,9 @@
                 <li class="{{ Request::path() == '/' ? 'active' : '' }}">
                     <a href="{{ route('home_path') }}">Inicio</a>
                 </li>
+                <li class="{{ Request::is('guy') ? 'active' : '' }}">
+                    <a href="{{ route('guy_index_path') }}">Individuos</a>
+                </li>
                 <li class="{{ Request::is('task') ? 'active' : '' }}">
                     <a href="{{ route('task_index_path') }}">Tareas 
                     <span class="badge">{{ Indicator::CountRegister('task') }}</span>

@@ -4,7 +4,7 @@ namespace TaskApp\Http\Controllers;
 
 use TaskApp\Entities\Task;
 use TaskApp\Entities\Category;
-use TaskApp\Entities\Guy;
+
 use Illuminate\Http\Request;
 use Illuminate\Database\Query;
 use Session;
@@ -22,13 +22,8 @@ class TaskController extends Controller
     {
         $tasks      = Task::orderBy('id', 'DESC')->get();
         $categories = Category::where('is_active', '=', '1')->get();
-        
-        foreach ($tasks as $task) {
-            $guys= Guy::where('task_id',$task->id)->get();
-        }
-        //dd($guys);
-        
-        return view('task.index')->with( ['tasks' => $tasks, 'categories' => $categories, 'guy'=> $guys] );
+       
+        return view('task.index')->with( ['tasks' => $tasks, 'categories' => $categories] );
     }
 
     /**

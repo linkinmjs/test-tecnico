@@ -43,3 +43,18 @@ Route::group([
     Route::post('store', 'CategoryController@store')->name('category_store_path');
     Route::get('update_status/{id}', 'CategoryController@updateStatus')->name('category_update_status_path');
 });
+
+// RUTAS DE INDIVIDUOS
+Route::get('/guy', 'GuyController@index')->name('guy_index_path');
+Route::group([
+    'prefix' => 'guy'
+], function() {
+    Route::post('search', 'GuyController@search')->name('guy_search_path');
+    // Route::get('create', 'CategoryController@create')->name('category_create_path');
+    // Route::get('show/{id}', 'CategoryController@show')->name('category_show_path');
+    // Route::get('edit/{id}', 'CategoryController@edit')->name('category_edit_path');
+    // Route::get('destroy/{id}', 'CategoryController@destroy')->name('category_destroy_path');
+    // Route::post('update', 'CategoryController@update')->name('category_update_path');
+    // Route::post('store', 'CategoryController@store')->name('category_store_path');
+    // Route::get('update_status/{id}', 'CategoryController@updateStatus')->name('category_update_status_path');
+});
