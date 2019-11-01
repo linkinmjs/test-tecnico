@@ -18,10 +18,10 @@
                 <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">Introducción</a></li>
+                <li><a href="#introduccion">Introducción</a></li>
                 <li><a href="#agregados">Agregados</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#">TO-DO</a></li>
+                <li><a href="#todo">TO-DO</a></li>
                 </ul>
                 </div>
             </div>
@@ -33,7 +33,7 @@
     <div class="row">
         <div class="col-sm-8 blog-main">
             <div class="blog-post">
-                <h2 class="blog-post-title">Introducción</h2>
+                <h2 id="introduccion" class="blog-post-title">Introducción</h2>
                 <p class="blog-post-meta">09 marzo de 2019 Por <a href="https://www.linkedin.com/in/alberto-j-urbaez-r-544498122/">Alberto Urbaez</a></p>
                 <h4>Enlace de Contacto</h4>
                 <ol class="list-unstyled">
@@ -140,13 +140,17 @@
                 	<li><b>Artisan</b> - <small>Interfaz de línea de comandos</small></li>
                 	<li><b>Eloquent</b> - <small>ORM oficial de el famework</small></li>
                 </ul>
-                <br>
+                <br>    
             </div>
         </div>
         <!-- /.blog-sidebar -->
         <div class="col-sm-8 blog-main">
             <div class="blog-post">
-             
+                
+
+                <hr/>
+                <br/>             
+                
                 <h2 id="agregados" class="blog-post-title">Agregados</h2>
                 <p class="blog-post-meta">31 Octubre de 2019 Por <a href="https://ar.linkedin.com/in/mauricio-joaquin-stampella-510680113">Stampella Mauricio</a></p>
                 <h4>Enlace de Contacto</h4>
@@ -156,20 +160,40 @@
                     <li><a href="https://ar.linkedin.com/in/mauricio-joaquin-stampella-510680113">linkedin</a></li>
                 </ol>
 
-                <p>Commodo ex qui elit labore sunt.</p>
+                <p>A continuación se brindará un breve resumen de lo implementado en el proyecto.</p>
                 <hr>
-                <p>Do mollit esse commodo laboris.</p>
-                <br>
-                <blockquote>
-                    <p>Consequat eu voluptate eiusmod sint ad ad ex mollit minim est.</p>
-                </blockquote>
-                <br>
-                <p>Elit aute eiusmod ullamco et eu officia eu consequat velit.</p>
-                <br>
-                <h3>Ea in consequat est reprehenderit eu officia ad fugiat quis aliqua proident.</h3>
                 
-                <p>Incididunt laborum duis excepteur tempor labore id veniam aliquip quis sint consectetur. Est amet cupidatat aute veniam. Laborum officia consequat non non. Ad dolore voluptate est et anim nisi cupidatat ex magna mollit est. Dolore culpa et Lorem elit laboris. Consequat aliquip aliqua sunt occaecat irure. Qui exercitation do labore duis fugiat velit excepteur nulla id fugiat anim consectetur.</p>
+                <h3>Individuo</h3>
+                <p>Podemos crear, modificar y eliminar las tareas. Pero sería excelente que podamos asignarelas a alguien. 
+                Por dicho motivo se llevó a cabo la implementación de la pestaña <b>"Individuos"</b>.</p>
+                <br/>
+                <p>Si bien la misma no fue finalizada, en esta los podremos:</p>
+                <ul>
+                    <li>agregar</li>
+                    <li>eliminar</li>
+                    <li>modificar</li>
+                    <li>buscar</li>
+                </ul>
+                <br/>
+                <h3>Creación de Tabla en la DB</h3>
+                <p>Para poder llevar a cabo las operaciones mencionadas, se creó una <b>migration</b>.
+                 En la misma se ingresó la creación de la tabla <b>Guys</b>, sobre la cual se alojarán los individuos.
+                 </p>
+
+                <br/>
+                <hr/>
+                <br/>
                 
+                 <h2 id="todo" class="blog-post-title">TO-DO</h2>
+                 <p>A continuación; el listado de tareas pendientes a realizar para concretar el proyecto:</p>
+                 <ul>
+                    <li>Concretar resto de las operaciones sobre <b>Individuos</b></li>
+                    <li>Mejorar estilos sobre el botón de anclaje</li>
+                    <li>Completar TO-DO</li>
+                    <li>. . .</li>
+                 </ul>
+
+
             </div>
         </div>
     </div>
