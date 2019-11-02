@@ -39,4 +39,4 @@ A continuación, les brindo el paso a paso para levantar localmente el proyecto 
 - Resolver problema de creación de Tareas ✓
 - Asociar Tarea a Individuo ✓
 - Documentar 
-- Crear nueva Feature
+- Crear nueva Feature ✓
